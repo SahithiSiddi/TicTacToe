@@ -1,0 +1,114 @@
+/* Body & Container */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    transition: background 0.5s;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading */
+h1 {
+    font-size: 3em;
+    color: #333;
+    text-shadow: 2px 2px #fff;
+    margin-bottom: 20px;
+}
+
+/* Player Input */
+#player-inputs input {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 2px solid #333;
+    transition: all 0.3s;
+}
+
+#player-inputs input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+#startGame {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    transition: transform 0.2s, background 0.3s;
+}
+
+#startGame:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+/* Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin: 30px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(145deg, #fdfbfb, #ebedee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2),
+                -5px -5px 15px rgba(255,255,255,0.7);
+    transition: all 0.2s ease;
+}
+
+.cell:hover {
+    background: #f1f1f1;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Message */
+#message {
+    font-size: 1.5em;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #333;
+    animation: fadeMessage 0.5s ease-in-out;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeMessage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
